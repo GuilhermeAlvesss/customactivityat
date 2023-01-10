@@ -1,0 +1,72 @@
+{
+  "workflowApiVersion": "1.1",
+  "metaData": {
+    "icon": "images/whatsapp.png",
+    "iconSmall": "images/whatsapp.png",
+    "category": "message"
+  },
+  "type": "REST",
+  "lang": {
+    "pt-BR": {
+      "name": "Custom Activity Wpp",
+      "description": "Envio de WhatsApp."
+    }
+  },
+  "arguments": {
+    "execute": {
+      "inArguments": [],
+      "outArguments": [],
+      "url": "https://e561-2804-431-d7ff-b7ef-3145-453-1a80-a58c.sa.ngrok.io/execute",
+      "verb": "POST",
+      "body": "",
+      "header": "",
+      "format": "json",
+      "useJwt": true,
+      "timeout": 10000
+    }
+  },
+  "configurationArguments": {
+    "applicationExtensionKey": "5c8a9d61-0632-4626-a78f-bd6083497d39",
+    "save": {
+      "url": "https://e561-2804-431-d7ff-b7ef-3145-453-1a80-a58c.sa.ngrok.io/save",
+      "verb": "POST",
+      "useJwt": true
+    },
+    "publish": {
+      "url": "https://e561-2804-431-d7ff-b7ef-3145-453-1a80-a58c.sa.ngrok.io/publish",
+      "verb": "POST",
+      "useJwt": true
+    },
+    "validate": {
+      "url": "https://e561-2804-431-d7ff-b7ef-3145-453-1a80-a58c.sa.ngrok.io/validate",
+      "verb": "POST",
+      "useJwt": true
+    },
+    "stop": {
+      "url": "https://e561-2804-431-d7ff-b7ef-3145-453-1a80-a58c.sa.ngrok.io/stop",
+      "verb": "POST",
+      "useJwt": true
+    }
+  },
+  "wizardSteps": [
+    {
+      "label": "Configure HSM Template",
+      "key": "step1"
+    }
+  ],
+  "userInterfaces": {
+    "configModal": {
+      "height": 200,
+      "width": 300,
+      "fullscreen": true
+    }
+  },
+  "schema": {
+    "arguments": {
+      "execute": {
+        "inArguments": [],
+        "outArguments": []
+      }
+    }
+  }
+}
